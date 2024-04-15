@@ -1,3 +1,3 @@
 module github.com/ZLinFeng/study-go
 
-go 1.17
+go 1.22.2
