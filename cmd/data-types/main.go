@@ -6,8 +6,7 @@ import (
 	"unsafe"
 )
 
-func main() {
-
+func basicType() {
 	// go语言中的数据类型有 基本类型、复合类型、引用类型和接口类型
 	fmt.Println("首先是基本类型: ")
 	var isValid bool = false
@@ -44,4 +43,19 @@ func main() {
 	fmt.Printf("八进制 %s 表示的数字是: %d\n", octalStr, parseOctal)
 	parseHexadecimal, _ := strconv.ParseInt(hexadecimalStr, 16, 64)
 	fmt.Printf("十六进制 %s 表示的数字是: %d\n", hexadecimalStr, parseHexadecimal)
+}
+
+func compositeType() {
+	// 数组
+	var firstArray [5]int = [5]int{0, 1, 2, 3, 4}
+	println("数组的第3个元素: ", firstArray[2])
+	println("遍历所有元素: ")
+	for i := 0; i < len(firstArray); i++ {
+		fmt.Printf("第 %d 个元素是 %d\n", i, firstArray[i])
+	}
+}
+
+func main() {
+	basicType()
+	compositeType()
 }
